@@ -1,0 +1,110 @@
+
+body{
+  background-color: $lightblue;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: 1fr 90% 1fr;
+  margin: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.contentContainer{
+  grid-row: 2/5;
+  grid-column: 1/4;
+  background-color: white;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  border-top: solid 3px $greyblue;
+  border-bottom: solid 3px $greyblue;
+}
+.title{
+  margin: 0;
+  color: $pink;
+  font-size: 40px;
+  text-align: center;
+  h1{
+    margin: 20px;
+    margin-top: 5px;
+  }
+}
+
+.links{
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 500px;
+  overflow-y: auto;
+  margin: 10px;
+  p{
+    font-size: 12px;
+  }
+}
+
+.projects{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  a{
+    text-decoration: none;
+    color: $blue;
+  }
+  a:hover{
+    color: $pink;
+  }
+  a:active{
+    color: $pink;
+    text-shadow: 1px 1px;
+  }
+  a:visited{
+    color: $greyblue;
+  }
+  h2{
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+.pic{
+  height: 100px;
+  width: 150px;
+  //border: 1px solid black;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  body{
+    grid-template-columns: 1fr 75% 1fr;
+  }
+  .title{
+    font-size: 25px;
+  }
+  .contentContainer{
+    grid-row: 1/6;
+    grid-column: 1/4;
+    background-color: white;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 3px solid $greyblue;
+    border-right: 3px solid $greyblue;
+  }
+
+  .links{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow-y: auto;
+    margin: 10px;
+  }
+}
